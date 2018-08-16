@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+workspace(name = "org_tensorflow")
 
 http_archive(
     name = "io_bazel_rules_closure",
@@ -18,4 +18,4 @@ http_archive(
 )
 
 load('@org_tensorflow//tensorflow:workspace.bzl', 'tf_workspace')
-tf_workspace(path_prefix = "", tf_repo_name= "org_tensorflow")
+tf_workspace()
