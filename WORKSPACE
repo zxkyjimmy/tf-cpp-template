@@ -12,9 +12,9 @@ http_archive(
 
 http_archive(
     name = "org_tensorflow",
-    urls = ["https://github.com/tensorflow/tensorflow/archive/v1.10.0.tar.gz"],
-    sha256 = "ee9cb98d9e0d8106f2f4ed52a38fe89399324af303e1401567e5b64a9f86744b",
-    strip_prefix = "tensorflow-1.10.0",
+    urls = ["https://github.com/tensorflow/tensorflow/archive/v1.13.1.tar.gz"],
+    sha256 = "7cd19978e6bc7edc2c847bce19f95515a742b34ea5e28e4389dade35348f58ed",
+    strip_prefix = "tensorflow-1.13.1",
 )
 
 load('@org_tensorflow//tensorflow:workspace.bzl', 'tf_workspace')
