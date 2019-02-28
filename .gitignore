@@ -1,6 +1,5 @@
 .DS_Store
 .ipynb_checkpoints
-/.bazelrc
 /.tf_configure.bazelrc
 /bazel-*
 /bazel_pip
