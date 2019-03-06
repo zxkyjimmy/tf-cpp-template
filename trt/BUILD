@@ -8,7 +8,7 @@ tf_cc_binary(
         "@org_tensorflow//tensorflow/cc:client_session",
         "@org_tensorflow//tensorflow/core:tensorflow",
     ] + if_tensorrt([
-        "@local_config_tensorrt//:nvinfer"
+        "@local_config_tensorrt//:nv_infer",
     ]),
-    copts = if_tensorrt(["-DGOOGLE_TENSORRT=1", "-DGOOGLE_CUDA"]),
+    #copts = if_tensorrt(["-DGOOGLE_TENSORRT=1", "-DGOOGLE_CUDA"]),
 )

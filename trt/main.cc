@@ -16,16 +16,16 @@ class Logger : public nvinfer1::ILogger
     switch (severity)
     {
     case Severity::kINTERNAL_ERROR:
-      std::err << "INTERNAL ERROR: " << msg << std::endl;
+      std::cerr << "INTERNAL ERROR: " << msg << std::endl;
       break;
     case Severity::kERROR:
-      std::err << "ERROR: " << msg << std::endl;
+      std::cerr << "ERROR: " << msg << std::endl;
       break;
     case Severity::kWARNING:
-      std::err << "WARNING ERROR: " << msg << std::endl;
+      std::cerr << "WARNING ERROR: " << msg << std::endl;
       break;
     case Severity::kINFO:
-      std::err << "INFO ERROR: " << msg << std::endl;
+      std::cerr << "INFO ERROR: " << msg << std::endl;
       break;
     }
   }
@@ -35,6 +35,9 @@ int main()
 {
   cudaSetDevice(2);
   nvinfer1::IRuntime *m_runtime = nvinfer1::createInferRuntime(g_logger);
+  int x;
+  std::cin >> x;
+  std::cout << "hi, " << x << std::endl;
   return 0;
 }
 
