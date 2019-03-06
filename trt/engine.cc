@@ -47,9 +47,7 @@ int Engine::Init()
 {
   cudaSetDevice(m_gpu);
   m_runtime = nvinfer1::createInferRuntime(g_logger);
-  int x;
-  std::cin >> x;
-  std::cout << "hi, " << x << ", DLA Core = " << m_runtime->getDLACore() << std::endl;
+  std::cout << "hi, DLA Core = " << m_runtime->getDLACore() << std::endl;
   return 0;
 }
 
