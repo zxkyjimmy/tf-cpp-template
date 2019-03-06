@@ -39,7 +39,7 @@ Engine::~Engine()
 {
   if (m_runtime)
   {
-    m_rumtime->destroy();
+    m_runtime->destroy();
   }
 }
 

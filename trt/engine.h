@@ -15,7 +15,7 @@ public:
   Engine(int gpu);
   ~Engine();
 
-  int init();
+  int Init();
 
 private:
   nvinfer1::IRuntime *m_runtime;

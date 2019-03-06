@@ -1,4 +1,4 @@
-load("@org_tensorflow//tensorflow:tensorflow.bzl", "tf_cc_binary", "if_tensorrt")
+load("@org_tensorflow//tensorflow:tensorflow.bzl", "tf_cc_binary", "if_tensorrt", "tf_copts")
 
 tf_cc_binary(
     name = "main",
@@ -17,4 +17,5 @@ cc_library(
     ] + if_tensorrt([
         "@local_config_tensorrt//:nv_infer",
     ]),
+    copts = tf_copts(),
 )
